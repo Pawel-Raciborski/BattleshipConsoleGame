@@ -1,2 +1,9 @@
-package com.battleship.services;public interface IShipCreator {
+package com.battleship.services;
+
+import com.battleship.model.WarShip;
+
+import java.util.Optional;
+
+public interface IShipCreator {
+    Optional<WarShip> prepareShip(String input, String[][] map);
 }

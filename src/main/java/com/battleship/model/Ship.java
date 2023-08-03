@@ -1,9 +1,11 @@
 package com.battleship.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.List;
 @Data
+@AllArgsConstructor
 public class Ship implements WarShip{
     private final WarShip.ShipType shipType;
     private final Direction direction;

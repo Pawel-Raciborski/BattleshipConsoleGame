@@ -25,9 +25,16 @@ public class ShipService implements IShipService{
 
                 Optional<WarShip> ship = shipCreator.prepareShip(inputMessage,map);
 
-                ship.ifPresent(ships::add);
+                ship.ifPresent(s -> addToList(s,ships));
             }
         }
+        ShipCache.getCache().clear();
+
         return ships;
+    }
+
+    private void addToList(WarShip ship, List<WarShip> ships) {
+        ships.add(ship);
+        ShipCache.cache(ship);
     }
 }
