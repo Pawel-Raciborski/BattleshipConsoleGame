@@ -5,7 +5,7 @@ import com.battleship.model.Player;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class PlayerService implements IPlayerService{
+public class PlayerCreateService implements IPlayerCreateService {
     private final IBoardService boardService;
     private final IPrintingService printingService;
     @Override
