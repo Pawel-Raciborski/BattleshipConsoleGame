@@ -12,10 +12,10 @@ public interface WarShip {
     @RequiredArgsConstructor
     @Getter
     enum ShipType{
-        CARRIER(5,1),
-        BATTLESHIP(4,2),
-        SUBMARINE(3,3),
-        DESTROYER(2,4);
+        CARRIER(Constants.FIVE,Constants.ONE),
+        BATTLESHIP(Constants.FOUR,Constants.TWO),
+        SUBMARINE(Constants.THREE,Constants.THREE),
+        DESTROYER(Constants.TWO,Constants.FOUR);
 
         private final int health;
         private final int quantity;

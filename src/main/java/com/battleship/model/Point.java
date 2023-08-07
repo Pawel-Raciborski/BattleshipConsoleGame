@@ -1,9 +1,11 @@
 package com.battleship.model;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
-@EqualsAndHashCode(callSuper = true)
-@Data
-public record Point(int x, int y) {
+@AllArgsConstructor
+@Getter
+@Setter
+public class Point{
+    private int x;
+    private int y;
 }

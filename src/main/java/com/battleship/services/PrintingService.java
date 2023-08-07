@@ -17,7 +17,7 @@ public class PrintingService implements IPrintingService{
         }
     }
 
-    private void printMessage(String string) {
+    public void printMessage(String string) {
         System.out.print(string);
     }
 
