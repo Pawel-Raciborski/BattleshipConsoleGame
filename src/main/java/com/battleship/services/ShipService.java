@@ -3,12 +3,14 @@ package com.battleship.services;
 import com.battleship.model.Constants;
 import com.battleship.model.WarShip;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
+@Service
 public class ShipService implements IShipService{
     private final IPrintingService printingService;
     private final IShipCreator shipCreator;

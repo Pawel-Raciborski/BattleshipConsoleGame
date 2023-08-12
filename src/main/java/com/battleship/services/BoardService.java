@@ -3,11 +3,13 @@ package com.battleship.services;
 import com.battleship.model.Board;
 import com.battleship.model.WarShip;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
 
 @RequiredArgsConstructor
+@Service
 public class BoardService implements IBoardService {
     private final IShipService shipService;
     @Override

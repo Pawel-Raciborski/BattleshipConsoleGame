@@ -3,8 +3,10 @@ package com.battleship.services;
 import com.battleship.model.Board;
 import com.battleship.model.Player;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
+@Service
 public class PlayerCreateService implements IPlayerCreateService {
     private final IBoardService boardService;
     private final IPrintingService printingService;

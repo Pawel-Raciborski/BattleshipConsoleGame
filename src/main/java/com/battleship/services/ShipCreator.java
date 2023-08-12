@@ -5,11 +5,13 @@ import com.battleship.model.Point;
 import com.battleship.model.Ship;
 import com.battleship.model.WarShip;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
+@Service
 public class ShipCreator implements IShipCreator {
     private final IShipValidator shipValidator;
     private final IPointService pointService;

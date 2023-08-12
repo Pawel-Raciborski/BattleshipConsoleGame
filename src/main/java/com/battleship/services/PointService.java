@@ -2,12 +2,14 @@ package com.battleship.services;
 
 import com.battleship.model.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
+@Service
 public class PointService implements IPointService {
     private final PrintingService printingService;
     private final PointValidator pointValidator;
