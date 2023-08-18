@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ShipValidator implements IShipValidator{
+public class ShipValidatorServiceImpl implements ShipValidatorService {
     @Override
     public boolean isFreeSpace(List<WarShip> shipsList, WarShip.ShipType type) {
         if(shipsList.isEmpty()){

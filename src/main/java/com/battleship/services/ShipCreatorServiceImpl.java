@@ -12,10 +12,10 @@ import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
-public class ShipCreator implements IShipCreator {
-    private final IShipValidator shipValidator;
-    private final IPointService pointService;
-    private final IPointValidator pointValidator;
+public class ShipCreatorServiceImpl implements ShipCreatorService {
+    private final ShipValidatorService shipValidator;
+    private final PointService pointService;
+    private final PointValidator pointValidator;
 
     @Override
     public Optional<WarShip> prepareShip(String input, String[][] map) {

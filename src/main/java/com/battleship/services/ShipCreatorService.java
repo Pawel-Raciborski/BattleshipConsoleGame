@@ -4,6 +4,6 @@ import com.battleship.model.WarShip;
 
 import java.util.Optional;
 
-public interface IShipCreator {
+public interface ShipCreatorService {
     Optional<WarShip> prepareShip(String input, String[][] map);
 }

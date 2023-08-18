@@ -4,6 +4,6 @@ import com.battleship.model.WarShip;
 
 import java.util.List;
 
-public interface IShipValidator {
+public interface ShipValidatorService {
     boolean isFreeSpace(List<WarShip> shipsList, WarShip.ShipType type);
 }
