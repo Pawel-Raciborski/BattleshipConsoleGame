@@ -1,5 +1,6 @@
 package com.battleship.services;
 
+import com.battleship.model.Player;
 import com.battleship.model.WarShip;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +14,10 @@ public class ShipValidatorServiceImpl implements ShipValidatorService {
             return true;
         }
         return shipsList.size() < type.getQuantity();
+    }
+
+    @Override
+    public boolean existShip(Player player) {
+        return player.board().warShips().isEmpty();
     }
 }

@@ -84,6 +84,16 @@ public class PointValidatorImpl implements PointValidator {
                && (y >= Constants.MIN_POS && y <= Constants.MAX_POS);
     }
 
+    @Override
+    public boolean isShipField(Point point, Player player) {
+        String[][] map = player.board().map();
+
+        int x = point.getX();
+        int y = point.getY();
+
+        return map[y][x].equals(Sign.POINT.getSign());
+    }
+
     private static int getMax(int index) {
         return Math.max(Constants.MIN_POS, index - 1);
     }

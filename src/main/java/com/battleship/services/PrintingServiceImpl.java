@@ -1,5 +1,6 @@
 package com.battleship.services;
 
+import com.battleship.model.Player;
 import com.battleship.model.WarShip;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ public class PrintingServiceImpl implements PrintingService {
         printMessage(GIVEN_NICKNAME);
         String name = ScannerProvider.getScanner().next();
 
-        printMessage(PREPARING_BOARD_FOR_PLAYER.formatted(name));
+        printMessageNewLine(PREPARING_BOARD_FOR_PLAYER.formatted(name));
 
         return name;
     }
@@ -27,6 +28,11 @@ public class PrintingServiceImpl implements PrintingService {
 
     public void printMessage(String string) {
         System.out.print(string);
+    }
+
+    @Override
+    public void printMessageNewLine(String string) {
+        System.out.println(string);
     }
 
     @Override
@@ -55,4 +61,5 @@ public class PrintingServiceImpl implements PrintingService {
 
         printMessage(menu);
     }
+
 }

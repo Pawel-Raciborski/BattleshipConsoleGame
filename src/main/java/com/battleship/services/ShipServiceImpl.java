@@ -23,7 +23,7 @@ public class ShipServiceImpl implements ShipService {
             printingService.printMenu();
 
             if(ScannerProvider.getScanner().hasNext()){
-                String inputMessage = ScannerProvider.getScanner().nextLine();
+                String inputMessage = ScannerProvider.getScanner().next();
 
                 Optional<WarShip> ship = shipCreator.prepareShip(inputMessage,map);
 

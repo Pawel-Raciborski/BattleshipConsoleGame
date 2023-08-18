@@ -1,6 +1,7 @@
 package com.battleship.services;
 
 import com.battleship.model.Direction;
+import com.battleship.model.Player;
 import com.battleship.model.Point;
 import com.battleship.model.WarShip;
 
@@ -11,4 +12,6 @@ public interface PointValidator {
     boolean isValidParameterSizeAndPattern(String cords, int length);
 
     boolean isValidPoint(int x, int y);
+
+    boolean isShipField(Point point, Player player);
 }

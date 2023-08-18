@@ -1,13 +1,11 @@
 package com.battleship.model;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
 import java.util.List;
 
-@RequiredArgsConstructor
-@ToString
-public class Board {
-    private final String[][] map;
-    private final List<WarShip> warShips;
+
+public record Board(String[][] map, List<WarShip> warShips) {
 }

@@ -1,10 +1,7 @@
 package com.battleship.model;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
-public class Player {
-    private final String name;
-    private final Board board;
-    private final Board shootBoard;
+public record Player(String name, Board board, Board shootBoard) {
 }

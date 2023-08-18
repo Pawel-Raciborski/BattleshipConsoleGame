@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static com.battleship.services.PrintingService.*;
+
 @RequiredArgsConstructor
 @Service
 public class PointServiceImpl implements PointService {
@@ -16,7 +18,7 @@ public class PointServiceImpl implements PointService {
 
     @Override
     public Optional<Point> preparePoint() {
-        printingService.printMessage(PrintingServiceImpl.GIVE_POINT);
+        printingService.printMessage(GIVE_POINT);
 
         String cord = ScannerProvider.getScanner().next().toUpperCase();
 
@@ -87,6 +89,14 @@ public class PointServiceImpl implements PointService {
             case HORIZONTAL -> horizontal(map,start,end);
             case VERTICAL -> vertical(map,start,end);
         };
+    }
+
+    @Override
+    public void updateMap(Sign old, Sign newSign, Point point, String[][] map) {
+        int x = point.getX();
+        int y = point.getY();
+
+        map[y][x] = map[y][x].replace(old.getSign(),newSign.getSign());
     }
 
     private List<Point> vertical(String[][] map, Point start, Point end) {
