@@ -40,21 +40,25 @@ public class PrintingServiceImpl implements PrintingService {
         String menu = MENU.formatted(
                 WarShip.ShipType.CARRIER.getQuantity(),
                 WarShip.ShipType.CARRIER.name(),
+                WarShip.ShipType.CARRIER.getHealth(),
                 ShipCache.getShipsListSize(WarShip.ShipType.CARRIER),
                 WarShip.ShipType.CARRIER.getQuantity(),
 
                 WarShip.ShipType.BATTLESHIP.getQuantity(),
                 WarShip.ShipType.BATTLESHIP.name(),
+                WarShip.ShipType.BATTLESHIP.getHealth(),
                 ShipCache.getShipsListSize(WarShip.ShipType.BATTLESHIP),
                 WarShip.ShipType.BATTLESHIP.getQuantity(),
 
                 WarShip.ShipType.SUBMARINE.getQuantity(),
                 WarShip.ShipType.SUBMARINE.name(),
+                WarShip.ShipType.SUBMARINE.getHealth(),
                 ShipCache.getShipsListSize(WarShip.ShipType.SUBMARINE),
                 WarShip.ShipType.SUBMARINE.getQuantity(),
 
                 WarShip.ShipType.DESTROYER.getQuantity(),
                 WarShip.ShipType.DESTROYER.name(),
+                WarShip.ShipType.DESTROYER.getHealth(),
                 ShipCache.getShipsListSize(WarShip.ShipType.DESTROYER),
                 WarShip.ShipType.DESTROYER.getQuantity()
         );

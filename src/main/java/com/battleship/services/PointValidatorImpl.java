@@ -19,8 +19,8 @@ public class PointValidatorImpl implements PointValidator {
     private boolean checkIsValidHorizontal(String[][] map, Point start, Point end) {
         int horizontalIndex = start.getY();
 
-        int startIndex = getMax(start.getY());
-        int endIndex = getMin(end.getY());
+        int startIndex = getMax(start.getX());
+        int endIndex = getMin(end.getX());
         int topSpaceIndex = getMax(horizontalIndex);
         int bottomSpaceIndex = getMin(horizontalIndex);
 
@@ -75,7 +75,7 @@ public class PointValidatorImpl implements PointValidator {
 
     @Override
     public boolean isValidParameterSizeAndPattern(String cords, int length) {
-        return length < 2 || length > 3 || !cords.matches("^\\d{1,2}[A-J]$");
+        return length >= 2 && length <= 3 && cords.matches("^\\d{1,2}[A-J]$");
     }
 
     @Override

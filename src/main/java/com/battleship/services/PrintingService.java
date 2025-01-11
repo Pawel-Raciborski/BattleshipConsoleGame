@@ -6,10 +6,10 @@ public interface PrintingService {
 
     String MENU = """
             CHOOSE SHIP:
-            %s.%4s [%s]/[%s]
-            %s.%4s [%s]/[%s]
-            %s.%4s [%s]/[%s]
-            %s.%4s [%s]/[%s]
+            %s.%4s (LENGTH: %s) [%s]/[%s]
+            %s.%4s (LENGTH: %s) [%s]/[%s]
+            %s.%4s (LENGTH: %s) [%s]/[%s]
+            %s.%4s (LENGTH: %s) [%s]/[%s]
             GIVE NUMBER BETWEEN (1-5):\s""";
 
     String GIVEN_NICKNAME = "NICKNAME: ";
