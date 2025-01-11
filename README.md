@@ -32,7 +32,8 @@ Position is passed as a pattern (`NUMBER+LETTER`), e.g. `1A`. We set the start p
 Game starts when players set their ships. The game lasts until one of the players destroy all enemy ships.
 
 #### Destroying ships
-To attack enemy we pass one point where we shoot. The pattern is the same as when we set ship on the board - `NUMBER+LETTER`, e.g. `1A`.
+To attack enemy we pass one point where we shoot. The pattern is the same as when we set ship on the board - `NUMBER+LETTER`, e.g. `1A`:
+
 ![Destroying ships](/assets/fight.png)
 
 
