@@ -14,7 +14,7 @@ Then player map configuration begins, where we choose player nickname and add pl
 ### Player ships
 
 #### Player board
-Player [Board](./src/main/java/com/battleship/model/Board.java) is an object consist of map and warships. It's instantiated when player is created ([PlayerCreateServiceImpl](./src/main/java/com/battleship/services/PlayerCreateServiceImpl.java)). Each player has two maps - his board and shoot map which represents area where player shoot.
+[Player](./src/main/java/com/battleship/model/Player.java) [Board](./src/main/java/com/battleship/model/Board.java) is an object consist of map and warships. It's instantiated when player is created ([PlayerCreateServiceImpl](./src/main/java/com/battleship/services/PlayerCreateServiceImpl.java)). Each player has two maps - his board and shoot map which represents area where player shoot.
 Map represents a "GUI" for player, as below:
 
 ![Player configuration](assets/game_preparation.png)
